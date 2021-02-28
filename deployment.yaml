@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment #  Deployment or Service
+metadata:
+  name: udacity-api-user
+  labels:
+    app: udacity-api-user
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: udacity-api-user
+  template:
+    metadata:
+      labels:
+        app: udacity-api-user
+    spec:
+      containers: # Docker image source
+      - name: udacity-api-user
+        image: zxa011023/udacity-api-user
+        ports:
+        - containerPort: 8082

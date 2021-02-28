@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service #  Deployment or Service
+metadata:
+  name: udacity-api-user
+  labels:
+    run: udacity-api-user
+spec:
+  ports:
+  - port: 8082
+    protocol: TCP
+  selector:
+    run: udacity-api-user
