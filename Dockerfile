@@ -20,5 +20,4 @@ RUN npm run tsc
 EXPOSE 8082
 
 # start app
-CMD [ "source", "set_env.sh"]
-CMD [ "npm", "start" ]
+CMD [ "node", "./www/server.js" ]
