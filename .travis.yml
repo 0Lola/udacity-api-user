@@ -20,4 +20,4 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push zxa011023/udacity-api-user
+  - docker push zxa011023/udacity-api-user:latest
